@@ -1,0 +1,2 @@
+1  ) clone the project and run ||  npm install
+2  ) Specify an available port in Index.js file
