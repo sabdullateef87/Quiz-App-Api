@@ -11,7 +11,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => {
+app.get("/:code", (req, res) => {
+  console.log(req.params);
   res.send("hello");
 });
+
+app.get("/anything/lo", (req, res) => {
+  console.log(req.params);
+  res.send("hello boys");
+});
+
 app.listen(PORT, () => console.log(`APP CONNECTED AT PORT -> ${PORT}`));
